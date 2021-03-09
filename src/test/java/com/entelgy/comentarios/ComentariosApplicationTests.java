@@ -1,6 +1,7 @@
 package com.entelgy.comentarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -49,8 +50,8 @@ class ComentariosApplicationTests {
 
 	@Test
 	void listCommentsVallNull() throws Exception {
-		List<Comment> lstCommets = restructureService.listarComentarios();
-		assertNull(lstCommets);
+		List<Comment> lstCommetsVal = restructureService.listarComentarios();
+		assertFalse(lstCommetsVal.isEmpty());
 	}
 
 }
