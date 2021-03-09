@@ -3,8 +3,6 @@ package com.entelgy.comentarios.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +18,7 @@ public class CommetsController {
 
 	@Autowired
 	private IRestructureService restructureService;
-
-	private static final Logger log = LoggerFactory.getLogger(CommetsController.class);
-
+ 
 	@PostMapping(value = "/", produces = "application/json;charset=UTF-8")
 	public ResponseEntity<Restructure> restructurar() throws Exception {
 		List<Comment> lsComments = restructureService.listarComentarios();
